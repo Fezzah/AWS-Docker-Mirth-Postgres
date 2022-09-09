@@ -28,15 +28,3 @@ docker --version
 
 Run the official AWS CLI version 2 Docker image
 docker run --rm -it amazon/aws-cli command
-
-
-
-
-Pull Mirth Image
-docker pull nextgenhealthcare/connect:latest
-
-
-
-Run mirth Image on EC2 server on port 8080/8443 without storing it in a repo
-docker run -d -p 8080:8080 nextgenhealthcare/connect:latest
-docker run -d -p 8443:8443 nextgenhealthcare/connect:latest
