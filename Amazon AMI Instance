@@ -1,0 +1,42 @@
+sudo yum update -y
+
+
+Install docker on Linux 2
+sudo amazon-linux-extras install docker
+
+
+
+
+Start docker service
+sudo service docker start
+
+
+
+
+Add the ec2-user to the docker group so you can execute Docker commands without using sudo.
+sudo usermod -a -G docker ec2-user
+
+
+
+
+Refresh and run docker without sudo. Get docker info and version
+docker info
+docker --version
+
+
+
+
+Run the official AWS CLI version 2 Docker image
+docker run --rm -it amazon/aws-cli command
+
+
+
+
+Pull Mirth Image
+docker pull nextgenhealthcare/connect:latest
+
+
+
+Run mirth Image on EC2 server on port 8080/8443 without storing it in a repo
+docker run -d -p 8080:8080 nextgenhealthcare/connect:latest
+docker run -d -p 8443:8443 nextgenhealthcare/connect:latest
